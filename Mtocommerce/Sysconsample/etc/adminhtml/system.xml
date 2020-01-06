@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="mtocommerce" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Mtocommerce</label>
+        </tab>
+        <section id="sysconfigsample" translate="label" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+            <tab>mtocommerce</tab>
+            <label>Sample Configuration</label>
+            <class>separator-top</class>
+            <resource>Muja_Mtocommerce::sysconsample_config</resource>
+            <group id="settings" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Settings</label>
+                
+                <field id="encryptfieldsample" translate="label" type="obscure" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Encrypt field sample</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+                </field>
+                
+                <field id="textfieldsample" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Text field sample</label>
+                    <comment>This text will be used later.</comment>
+                </field>
+                
+                <field id="enablefieldsample" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Field Sample</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                
+                
+                <field id="selectfieldsample" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Selectbox Field Sample</label>
+                    <source_model>Mtocommerce\Sysconsample\Model\Config\Source\SelectFieldSample</source_model>
+                </field>
+                
+                <field id="multiselectfieldsample" translate="label" type="multiselect" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>MultiSelect Field Sample</label>
+                    <source_model>Mtocommerce\Sysconsample\Model\Config\Source\MultiSelectFieldSample</source_model>
+                    <can_be_empty>1</can_be_empty>
+                </field>
+                
+                
+                
+            </group>
+        </section>
+    </system>
+</config>
